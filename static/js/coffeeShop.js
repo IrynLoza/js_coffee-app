@@ -6,7 +6,13 @@ const addItemToCart = (itemName) => {
       <td>${itemName}</td>
     </tr>
   `);
+
 };
+
+$('.add-to-order').on('click', () => {
+  addItemToCart(`Coffee`); 
+  incrementCartTotal(1.50);
+})
 
 const resetCart = () => {
   $('#cart-total').html('0.00');
