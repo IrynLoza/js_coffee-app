@@ -35,6 +35,14 @@ const incrementCoffeeSold = (amountSold) => {
   $('#coffee-sold-counter').html(coffeeSold);
 };
 
+$('#place-order').on('click', () => { 
+  // let count = incrementCartTotal(1.5)
+  // count = count / 1.50 
+  incrementCoffeeSold($('#cart-items').children().length);
+  resetCart();
+})
+
+
 const setProgressAndStatus = (progressVal, statusMsg) => {
   $('#order-progress').attr('value', progressVal);
   $('#order-status-message').html(statusMsg);
